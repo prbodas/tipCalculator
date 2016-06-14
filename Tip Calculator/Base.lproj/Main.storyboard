@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,13 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yDe-RJ-My4">
-                                <rect key="frame" x="52" y="65" width="23" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ad-cp-2xq">
                                 <rect key="frame" x="52" y="140" width="25" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ahj-NB-N1Y">
-                                <rect key="frame" x="203" y="49" width="66" height="30"/>
+                                <rect key="frame" x="120" y="84" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -75,6 +68,13 @@
                                     <action selector="billChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="tEr-yy-deD"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yDe-RJ-My4">
+                                <rect key="frame" x="52" y="93" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -82,7 +82,13 @@
                             <outletCollection property="gestureRecognizers" destination="bsL-1d-N6U" appends="YES" id="gdJ-ZY-8kf"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="bnK-im-Exf"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="bnK-im-Exf">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="4SU-Tg-PSu">
+                            <connections>
+                                <segue destination="uL3-V0-XQ7" kind="push" id="1zA-XY-HJh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="ahj-NB-N1Y" id="Nj3-vh-MSz"/>
                         <outlet property="tipLabel" destination="8nm-47-AdV" id="iig-SL-jxO"/>
@@ -98,6 +104,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="662" y="289"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="JRJ-qG-l6g">
+            <objects>
+                <viewController id="uL3-V0-XQ7" customClass="SettingsViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSl-6n-ODQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qCG-pS-G7l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZH-Bw-6MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jIv-sl-o4Z">
