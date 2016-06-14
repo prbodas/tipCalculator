@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					9A59A5071D10A1EF004E54AB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4S377L838K;
 					};
 					9A59A51B1D10A1EF004E54AB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -401,10 +402,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "prbodas.Tip-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "prbodas.Tip-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +491,7 @@
 				9A59A5321D10A1EF004E54AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A59A5331D10A1EF004E54AB /* Build configuration list for PBXNativeTarget "Tip CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +500,7 @@
 				9A59A5351D10A1EF004E54AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A59A5361D10A1EF004E54AB /* Build configuration list for PBXNativeTarget "Tip CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				9A59A5381D10A1EF004E54AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
